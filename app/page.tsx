@@ -39,20 +39,20 @@ import { getFrameMetadata } from '@coinbase/onchainkit';
 import type { Metadata } from 'next';
 
 const randomInt = Math.floor(Math.random() * 100);
-const imageUrlBase = `https://picsum.photos/id/${randomInt}/200/300`;
+const imageUrlBase = `https://picsum.photos/id/${randomInt}/1146/600`;
 
 const frameMetadata = getFrameMetadata({
   buttons: [
     {
-      label: "Begin"
+      label: 'Begin'
+    }, 
+    {
+      label: 'Start'
     }
   ],
   image: imageUrlBase,
   post_url: `${process.env.NEXT_PUBLIC_BASE_URL}/api/frame?id=1`,
-  // post_url: `${uri}/api/frame?id=1`,
 });
-
-console.log('This is the base url', process.env.NEXT_PUBLIC_BASE_URL);
 
 export const metadata: Metadata = {
   title: 'Cosmic Cowboys',
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Cosmic Cowboys',
     description: 'A frame telling the story of Cosmic Cowboys',
-    images: [imageUrlBase],
+    images: [`https://picsum.photos/id/${randomInt}/1146/600`],
   },
   other: {
     ...frameMetadata,
