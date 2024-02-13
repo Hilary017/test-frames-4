@@ -124,7 +124,7 @@ export async function POST(request: NextRequest) {
       },
     ],
     ogImage: `${imageUrlBase}/600`,
-    postUrl: `${process.env.NEXT_PUBLIC_BASE_URL}/frame`,
+    postUrl: `${process.env.NEXT_PUBLIC_BASE_URL}/api/frame`,
   };
 
 

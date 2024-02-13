@@ -57,7 +57,7 @@ const initialFrame: Frame = {
       action: 'post'
     },
   ],
-  postUrl: `${process.env.NEXT_PUBLIC_BASE_URL}/frame`,
+  postUrl: `${process.env.NEXT_PUBLIC_BASE_URL}/api/frame`,
 };
 
 // Export Next.js metadata
